@@ -5,6 +5,7 @@ import (
 	"crypto/tls"
 	"errors"
 	"fmt"
+	"log"
 	"net"
 	"net/mail"
 	"net/textproto"
@@ -906,7 +907,8 @@ func sendMailProcess(from string, to []string, msg string, c *smtpClient) error 
 	// Set the recipients
 	for _, address := range to {
 		if err := c.rcpt(address); err != nil {
-			return err
+			log.Println(err)
+			//return err
 		}
 	}
 

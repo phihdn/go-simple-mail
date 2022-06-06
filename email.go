@@ -318,11 +318,12 @@ func (email *Email) AddAddresses(header string, addresses ...string) *Email {
 			email.returnPath = address.Address
 		default:
 			// check that the address was added to the recipients list
-			email.recipients, err = addAddress(email.recipients, address.Address)
+			/* email.recipients, err = addAddress(email.recipients, address.Address)
 			if err != nil {
 				email.Error = errors.New("Mail Error: " + err.Error() + "; Header: [" + header + "] Address: [" + addresses[i] + "]")
 				return email
-			}
+			} */
+			email.recipients = append(email.recipients, address.Address)
 		}
 
 		// make sure the from and sender addresses are different

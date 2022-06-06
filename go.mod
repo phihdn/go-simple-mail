@@ -1,4 +1,4 @@
-module github.com/phi/go-simple-mail/v2
+module github.com/phihdn/go-simple-mail/v2
 
 require (
 	github.com/go-test/deep v1.0.8 // indirect

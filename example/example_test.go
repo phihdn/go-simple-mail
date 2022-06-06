@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	mail "github.com/phi/go-simple-mail/v2"
+	mail "github.com/phihdn/go-simple-mail/v2"
 )
 
 // Some variables to connect and the body.
